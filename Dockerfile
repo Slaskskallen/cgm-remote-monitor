@@ -17,7 +17,6 @@ RUN npm install --cache /tmp/empty-cache && \
   # mkdir /tmp/public && \
   # chown node:node /tmp/public
 
-USER node
 EXPOSE 10000
 
 CMD ["node", "lib/server/server.js"]
