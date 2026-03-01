@@ -10,4 +10,4 @@ RUN npm install --cache /tmp/empty-cache && \
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "PORT=10000 HOST=0.0.0.0 node lib/server/server.js"]
+CMD node server.js & sleep 5 && netstat -tulpn && sleep 3600
