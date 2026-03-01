@@ -1,5 +1,4 @@
 FROM node:22-alpine
-RUN apk add --no-cache net-tools
 
 WORKDIR /opt/app
 COPY . .
@@ -10,4 +9,4 @@ RUN npm install --cache /tmp/empty-cache && \
 
 EXPOSE 10000
 
-CMD node server.js & sleep 5 && netstat -tulpn && sleep 3600
+CMD sh -c 'echo "PORT is: $PORT" && node server.js'
