@@ -9,4 +9,4 @@ RUN npm install --cache /tmp/empty-cache && \
 
 EXPOSE 1337
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
